@@ -10,19 +10,22 @@ int main(void) {
 	SetConsoleOutputCP(1251);
 	
 	char user_string[200];
-	char end_letter;
+	char end_letter = '\0';
 	int count = 0;
 
 	puts("Введите вашу строку:");
 	fgets(user_string, 199, stdin);
 
+	for (int i = 0; user_string[i] != '\0'; i++) user_string[i] = tolower(user_string[i]);
+	
+
 	for (int i = 0; user_string[i] != '\0'; i++) {
 
-		if (user_string[i + 1] == ' ') { end_letter = user_string[i]; break; }
+		if (user_string[i + 1] == ' ' || user_string[i + 1] == '\0' || user_string[i + 1] == '\n') { end_letter = user_string[i]; break; }
 
 	}
 
-	for (int i = 0; user_string[i] != '\0'; i++) {
+	for (int i = 1; user_string[i] != '\0'; i++) {
 	
 		if ((user_string[i - 1] == ' ') && (user_string[i] == end_letter)) count++;
 
