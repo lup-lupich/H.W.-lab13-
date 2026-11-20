@@ -7,8 +7,20 @@
 
 ### Алгоритм
 1. **Начало**
-
-2. **Конец**
+2. Инициализация массива и переменных
+   - char `user_string[200]` - массив
+   - char `end_letter` = '\0' - последняя элемент массива (строки)
+   - int `count` = 0 - счетчик строк
+4. Вывод приглашения для ввода
+5. Заполнение массива данными пользователя
+6. Цикл for от 0 до `user_string[i]` != '\0', шаг - 1
+   - `user_string[i]` = `tolower(user_string[i])`
+7. Цикл for от 0 до `user_string[i]` != '\0', шаг - 1
+   - Условный оператор if: if (`user_string[i + 1]` == ' ' || `user_string[i + 1]` == '\0' || `user_string[i + 1]` == '\n') { `end_letter` = `user_string[i]`; break; }
+8. Цикл for от 0 до `user_string[i]` != '\0', шаг - 1
+8. Условный оператор if: if (`user_string[0]` == `end_letter`) `count`++;
+9. Вывод `count`
+4. **Конец**
 
 ### Блок-схема
 ![Блок-схема алгоритма](Images/SCHEMA_lab13.png) 
