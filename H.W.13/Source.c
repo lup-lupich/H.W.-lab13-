@@ -33,7 +33,7 @@ int main(void) {
 
 	if (user_string[0] == end_letter) count++;
 
-	printf("%d слов начинается с последней буквы первого слова", count);
+	printf("%d слов начинаются с последней буквы первого слова", count);
 
 	return 0;
 }
